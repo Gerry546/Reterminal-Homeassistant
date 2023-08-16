@@ -1,0 +1,17 @@
+# ignore confidential stuff
+secrets.yaml
+
+# ignore database
+home-assistant.log*
+home-assistant_*
+
+# ignore generic folder
+.cloud
+.storage
+
+# ignore specific folder
+tts
+custom_components
+www
+backups
+image
