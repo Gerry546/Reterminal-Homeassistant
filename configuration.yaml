@@ -25,6 +25,15 @@ scene: !include scenes.yaml
 
 lovelace:
   mode: storage
+  resources:
+    - url: /www/community/lovelace-layout-card/layout-card.js
+      type: module
+    - url: /hacsfiles/lovelace-card-mod/card-mod.js
+      type: module
+    - url: /hacsfiles/swipe-card/swipe-card.js
+      type: module
+    - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+      type: module
   dashboards:
     lovelace-yaml:
       mode: yaml
