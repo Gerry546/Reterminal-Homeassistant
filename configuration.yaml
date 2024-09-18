@@ -1,14 +1,16 @@
+# THIS IS PREINSTALLED CONFIGURATION.YAML
+# As a basis the default generated HA version is used and items are appended if the need to be activated
 
 # Loads default set of integrations. Do not remove.
 default_config:
 
 # Load frontend themes from the themes folder
 frontend:
-  themes: !include_dir_merge_named common/themes
+  themes: !include_dir_merge_named themes
 
-# Text to speech
-tts:
-  - platform: google_translate
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
 
 # Bypass login page if localhost
 homeassistant:
@@ -22,25 +24,15 @@ homeassistant:
       allow_bypass_login: true
     - type: homeassistant
 
-automation: !include automations.yaml
-script: !include scripts.yaml
-scene: !include scenes.yaml
-
+# Add custom lovelace frontend
 lovelace:
   mode: storage
-  resources:
-    - url: /www/community/lovelace-layout-card/layout-card.js
-      type: module
-    - url: /hacsfiles/lovelace-card-mod/card-mod.js
-      type: module
-    - url: /hacsfiles/swipe-card/swipe-card.js
-      type: module
-    - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
-      type: module
   dashboards:
-    lovelace-yaml:
-      mode: yaml
-      title: Dashboard
-      icon: mdi:home
+    # Main Dashboard
+    ui-dashboard:
+      require_admin: false
       show_in_sidebar: true
-      filename: lovelace.yaml
+      icon: mdi:gauge
+      title: Dashboard
+      filename: common/ui/ui-lovelace.yaml
+      mode: yaml
