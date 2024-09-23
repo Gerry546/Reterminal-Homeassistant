@@ -15,8 +15,8 @@ scene: !include scenes.yaml
 # Bypass login page if localhost
 homeassistant:
   name: Reterminal
-  latitude: 51,5044953223804
-  longitude: 5,386937856674194
+  latitude: 51.5044953223804
+  longitude: 5.386937856674194
   elevation: 17
   unit_system: metric
   currency: EUR
