@@ -1,0 +1,2 @@
+# Workaround to get the default dashboard to be the custom one
+!include "common/ui/ui-lovelace.yaml"

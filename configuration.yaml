@@ -34,13 +34,15 @@ homeassistant:
 
 # Add custom lovelace frontend
 lovelace:
-  mode: storage
-  dashboards:
-    # Main Dashboard
-    ui-dashboard:
-      require_admin: false
-      show_in_sidebar: true
-      icon: mdi:gauge
-      title: Dashboard
-      filename: common/ui/ui-lovelace.yaml
-      mode: yaml
+  mode: yaml
+  
+  # mode: storage
+  # dashboards:
+  #   # Main Dashboard
+  #   ui-dashboard:
+  #     require_admin: false
+  #     show_in_sidebar: true
+  #     icon: mdi:gauge
+  #     title: Dashboard
+  #     filename: common/ui/ui-lovelace.yaml
+  #     mode: yaml
